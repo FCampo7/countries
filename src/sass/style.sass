@@ -55,7 +55,7 @@ $White: hsl(0, 0%, 100%)
 
 #main
     @include flex(column, flex-start, center)
-    min-height: calc(100vh - 178px)
+    min-height: calc(100vh - 149px)
     background-color: $Very-Dark-Blue-DM
     color: $White
     padding: 0 1.5rem
@@ -194,13 +194,16 @@ $White: hsl(0, 0%, 100%)
         color: $White
         gap: 2rem
 
-        p
-            font-size: 1rem
-            font-weight: 400
-            margin-bottom: 0.5rem
-            
-            strong
-                font-weight: 700
+        .section
+            @include flex(column, space-between, start)
+            gap: 1rem
+            p
+                font-size: 1rem
+                font-weight: 400
+                margin-bottom: 0.5rem
+                
+                strong
+                    font-weight: 700
 
         #country-borders
             @include flex(column, center, start)
