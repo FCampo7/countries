@@ -1,0 +1,330 @@
+/**
+ *  Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+ *  Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+ *  Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+ *  Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+ *  Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+ *  White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0.1rem;
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+#header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin-left: 1.5rem;
+}
+#header button {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: calc(100vh - 178px);
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+  padding: 0 1.5rem;
+}
+#main .search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+}
+#main .search-container .search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: hsl(209, 23%, 22%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#main .search-container .search input {
+  width: 100%;
+  background-color: hsl(209, 23%, 22%);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: hsl(0, 0%, 100%);
+}
+#main .search-container .filter {
+  width: 248px;
+  align-self: start;
+  cursor: pointer;
+}
+#main .search-container .filter .picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 1rem;
+  align-self: start;
+  background-color: hsl(209, 23%, 22%);
+  anchor-name: --region-picker;
+}
+#main .search-container .filter #region-picker {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  display: none;
+  position: absolute;
+  position-anchor: --region-picker;
+  gap: 0.25rem;
+  width: 248px;
+  background-color: hsl(209, 23%, 22%);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+#main .search-container .filter #region-picker .region-option {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: hsl(209, 23%, 22%);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#main .search-container .filter #region-picker .region-option:hover {
+  background-color: hsl(207, 26%, 17%);
+}
+#main .back-button {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  align-self: start;
+  background-color: hsl(209, 23%, 22%);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#main .back-button:hover {
+  background-color: hsl(207, 26%, 17%);
+}
+#main #countries {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2rem;
+  width: 100%;
+  gap: 2rem;
+}
+#main #countries .card {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 300px;
+  background-color: hsl(209, 23%, 22%);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#main #countries .card:hover {
+  background-color: hsl(207, 26%, 17%);
+}
+#main #countries .card img {
+  width: 300px;
+  height: 175px;
+  border-radius: 0.5rem;
+}
+#main #countries .card .card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  padding: 2rem;
+}
+#main #countries .card .card-info h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+#main #countries .card .card-info p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+#country-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#country-details .country-flag {
+  margin-bottom: 2rem;
+}
+#country-details .country-flag .flag {
+  width: 320px;
+  height: 200px;
+}
+#country-details .country-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+  gap: 2rem;
+}
+#country-details .country-info p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+#country-details .country-info p strong {
+  font-weight: 700;
+}
+#country-details .country-info #country-borders {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5rem;
+}
+#country-details .country-info #country-borders #border-countries-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+#country-details .country-info #country-borders #border-countries-container a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(209, 23%, 22%);
+  padding: 0.25rem 1.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#country-details .country-info #country-borders #border-countries-container a:hover {
+  background-color: hsl(207, 26%, 17%);
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+}
+#footer p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+#footer p a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+#footer p a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 920px) {
+  #main .search-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #main .search-container .search {
+    max-width: 400px;
+  }
+  #main .search-container .filter {
+    align-self: center;
+  }
+  #main #countries {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  #country-details {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 4rem;
+    margin: 1rem;
+  }
+  #country-details .country-flag {
+    margin: 0;
+  }
+  #country-details .country-flag .flag {
+    width: 500px;
+    height: 300px;
+  }
+  #country-details .country-info .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 5rem;
+  }
+  #country-details .country-info #country-borders {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
