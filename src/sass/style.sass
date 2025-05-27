@@ -1,17 +1,5 @@
-/**
-    Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
-    Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
-    Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
-    Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
-    Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
-    White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)*/
-    
-$Dark-Blue-Elements: hsl(209, 23%, 22%)
-$Very-Dark-Blue-DM: hsl(207, 26%, 17%)
-$Very-Dark-Blue-LM: hsl(200, 15%, 8%)
-$Dark-Gray: hsl(0, 0%, 52%)
-$Very-Light-Gray: hsl(0, 0%, 98%)
-$White: hsl(0, 0%, 100%)
+@use "themes"
+@use "base"
 
 @mixin flex($direction: row, $justify: center, $align: center)
     display: flex
@@ -32,8 +20,6 @@ $White: hsl(0, 0%, 100%)
 #header
     @include flex(row, space-between, center)
     padding: 1.5rem 0.1rem
-    background-color: $Dark-Blue-Elements
-    color: $White
     
     h1
         font-size: 1.5rem
@@ -43,8 +29,6 @@ $White: hsl(0, 0%, 100%)
         margin-left: 1.5rem
     
     button
-        background-color: $Dark-Blue-Elements
-        color: $White
         border: none
         border-radius: 0.5rem
         padding: 0.5rem 1rem
@@ -56,8 +40,6 @@ $White: hsl(0, 0%, 100%)
 #main
     @include flex(column, flex-start, center)
     min-height: calc(100vh - 149px)
-    background-color: $Very-Dark-Blue-DM
-    color: $White
     padding: 0 1.5rem
 
     .search-container
@@ -67,7 +49,6 @@ $White: hsl(0, 0%, 100%)
             @include flex(row, center, center)
             width: 100%
             height: 50px
-            background-color: $Dark-Blue-Elements
             border-radius: 0.5rem
             padding: 1rem
             margin-top: 2rem
@@ -75,12 +56,10 @@ $White: hsl(0, 0%, 100%)
 
             input
                 width: 100%
-                background-color: $Dark-Blue-Elements
                 border: none
                 border-radius: 0.5rem
                 padding: 0.5rem
                 font-size: 1rem
-                color: $White
 
         .filter
             width: 248px
@@ -92,8 +71,7 @@ $White: hsl(0, 0%, 100%)
                 width: 100%
                 height: 50px
                 padding: 1rem
-                align-self: start 
-                background-color: $Dark-Blue-Elements
+                align-self: start
                 anchor-name: --region-picker
             
             #region-picker
@@ -103,7 +81,6 @@ $White: hsl(0, 0%, 100%)
                 position-anchor: --region-picker
                 gap: 0.25rem
                 width: 248px
-                background-color: $Dark-Blue-Elements
                 border-radius: 0.5rem
                 padding: 1.5rem
                 margin-top: 0.5rem
@@ -112,28 +89,20 @@ $White: hsl(0, 0%, 100%)
                 .region-option
                     width: 100%
                     padding: 0.5rem
-                    background-color: $Dark-Blue-Elements
                     border-radius: 0.5rem
                     cursor: pointer
                     transition: all 0.3s ease-in-out
 
-                    &:hover
-                        background-color: $Very-Dark-Blue-DM
 
     .back-button
         text-decoration: none
-        color: $White
         align-self: start
-        background-color: $Dark-Blue-Elements
         border-radius: 0.5rem
         padding: 0.5rem 1rem
         margin-top: 2rem
         margin-bottom: 2rem
         cursor: pointer
         transition: all 0.3s ease-in-out
-
-        &:hover
-            background-color: $Very-Dark-Blue-DM
     
     #countries
         @include flex(column, flex-start, center)
@@ -143,18 +112,13 @@ $White: hsl(0, 0%, 100%)
 
         .card
             text-decoration: none
-            color: $White
 
             @include flex(column, flex-start, center)
             width: 300px
-            background-color: $Dark-Blue-Elements
             border-radius: 0.5rem
             margin-bottom: 2rem
             cursor: pointer
             transition: all 0.3s ease-in-out
-
-            &:hover
-                background-color: $Very-Dark-Blue-DM
 
             img
                 width: 300px
@@ -174,7 +138,6 @@ $White: hsl(0, 0%, 100%)
                     font-size: 1rem
                     font-weight: 400
                     margin-bottom: 0.5rem
-    
 
 #country-details
     @include flex(column, center, center)
@@ -190,8 +153,6 @@ $White: hsl(0, 0%, 100%)
     .country-info
         @include flex(column, center, start)
         width: 100%
-        background-color: $Very-Dark-Blue-DM
-        color: $White
         gap: 2rem
 
         .section
@@ -216,35 +177,18 @@ $White: hsl(0, 0%, 100%)
 
                 a
                     @include flex(column, center, center)
-                    text-decoration: none
-                    color: $White
-                    background-color: $Dark-Blue-Elements
                     padding: 0.25rem 1.75rem
-                    cursor: pointer
-                    transition: all 0.3s ease-in-out
-
-                    &:hover
-                        background-color: $Very-Dark-Blue-DM
 
 
 #footer
     @include flex(column, center, center)
     width: 100%
-    background-color: $Dark-Blue-Elements
-    color: $White
     padding: 1rem
 
     p
         font-size: 1rem
         font-weight: 400
         margin-bottom: 0.5rem
-
-        a
-            color: $White
-            text-decoration: none
-
-            &:hover
-                text-decoration: underline
 
 
 @media (min-width: 920px)

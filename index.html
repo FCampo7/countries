@@ -10,21 +10,37 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./src/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-...código..."
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<script src="./src/js/script.js" defer></script>
+		<script src="./src/js/themes.js" defer></script>
 		<title>Countries</title>
 	</head>
 	<body onload="get_data()">
 		<header id="header">
 			<h1>Where in the world?</h1>
-			<button id="dark-mode-toggle" class="dark-mode-toggle">
-				<span class="toggle-icon">🌙</span>
+			<button
+				id="dark-mode-toggle"
+				class="dark-mode-toggle"
+				onclick="toggleTheme()"
+			>
+				<span class="toggle-icon"
+					><i class="fa-solid fa-moon"></i
+				></span>
 				<span class="toggle-text">Dark Mode</span>
 			</button>
 		</header>
 		<main id="main">
 			<div class="search-container">
 				<div class="search">
-					<span class="search-icon">🔍</span>
+					<span class="search-icon"
+						><i class="fa-solid fa-magnifying-glass"></i
+					></span>
 					<input
 						type="text"
 						id="search-input"
@@ -35,7 +51,9 @@
 				<div class="filter">
 					<div class="picker" onclick="toggleRegionPicker()">
 						Filter by Region
-						<span class="arrow">▼</span>
+						<span class="arrow"
+							><i class="fa-solid fa-caret-down"></i
+						></span>
 					</div>
 					<div id="region-picker">
 						<div
@@ -94,4 +112,15 @@
 			</p>
 		</footer>
 	</body>
+
+	<script>
+		function toggleTheme() {
+			const current = document.body.classList.contains("theme-dark")
+				? "theme-dark"
+				: "theme-light";
+			const next =
+				current === "theme-dark" ? "theme-light" : "theme-dark";
+			setTheme(next);
+		}
+	</script>
 </html>

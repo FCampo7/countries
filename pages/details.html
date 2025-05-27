@@ -10,20 +10,36 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="../src/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-...código..."
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<script src="../src/js/details.js" defer></script>
+		<script src="../src/js/themes.js" defer></script>
 		<title>Countries</title>
 	</head>
 	<body>
 		<header id="header">
 			<h1>Where in the world?</h1>
-			<button id="dark-mode-toggle" class="dark-mode-toggle">
-				<span class="toggle-icon">🌙</span>
+			<button
+				id="dark-mode-toggle"
+				class="dark-mode-toggle"
+				onclick="toggleTheme()"
+			>
+				<span class="toggle-icon"
+					><i class="fa-solid fa-moon"></i
+				></span>
 				<span class="toggle-text">Dark Mode</span>
 			</button>
 		</header>
 		<main id="main">
 			<a href="../index.html" id="back-button" class="back-button">
-				<span class="back-icon">⬅️</span>
+				<span class="back-icon"
+					><i class="fa-solid fa-arrow-left"></i
+				></span>
 				<span class="back-text">Back</span>
 			</a>
 			<div id="country-details"></div>
@@ -35,4 +51,15 @@
 			</p>
 		</footer>
 	</body>
+
+	<script>
+		function toggleTheme() {
+			const current = document.body.classList.contains("theme-dark")
+				? "theme-dark"
+				: "theme-light";
+			const next =
+				current === "theme-dark" ? "theme-light" : "theme-dark";
+			setTheme(next);
+		}
+	</script>
 </html>

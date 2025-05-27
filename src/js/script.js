@@ -63,12 +63,16 @@ function filterByRegion(region) {
 	if (region === "All") {
 		regionPicker.innerHTML = `
 				Filter by Region
-				<span class="arrow">▼</span>
+				<span class="arrow"
+							><i class="fa-solid fa-caret-down"></i
+						></span>
 		`;
 	} else {
 		regionPicker.innerHTML = `
 				${region}
-				<span class="arrow">▼</span>
+				<span class="arrow"
+							><i class="fa-solid fa-caret-down"></i
+						></span>
 		`;
 	}
 	toggleRegionPicker();

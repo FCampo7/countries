@@ -5,6 +5,142 @@
  *  Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
  *  Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
  *  White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)*/
+.theme-light {
+  --color-elements: hsl(0, 0%, 100%);
+  --color-background: hsl(0, 0%, 98%);
+  --color-text: hsl(200, 15%, 8%);
+  --color-input: hsl(0, 0%, 100%);
+  --color-button: hsl(0, 0%, 100%);
+  --color-button-text: hsl(200, 15%, 8%);
+}
+
+.theme-dark {
+  --color-elements: hsl(209, 23%, 22%);
+  --color-background: hsl(207, 26%, 17%);
+  --color-text: hsl(0, 0%, 100%);
+  --color-input: hsl(209, 23%, 22%);
+  --color-button: hsl(209, 23%, 22%);
+  --color-button-text: hsl(0, 0%, 100%);
+}
+
+#header {
+  background-color: var(--color-elements);
+  color: var(--color-text);
+}
+
+button {
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+}
+button:hover {
+  background-color: var(--color-elements);
+}
+
+#main {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.search-container .search {
+  background-color: var(--color-input);
+  color: var(--color-text);
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.search-container .search input {
+  background-color: var(--color-input);
+  color: var(--color-text);
+}
+.search-container .filter {
+  background-color: var(--color-elements);
+  color: var(--color-text);
+  border: 1px solid var(--color-input);
+}
+.search-container .filter:hover {
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+}
+.search-container .filter .picker {
+  background-color: var(--color-elements);
+  color: var(--color-text);
+  border: 1px solid var(--color-input);
+}
+.search-container .filter .picker:hover {
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+}
+.search-container .filter #region-picker {
+  background-color: var(--color-elements);
+  color: var(--color-text);
+  border: 1px solid var(--color-input);
+}
+.search-container .filter #region-picker .region-option {
+  background-color: var(--color-elements);
+  color: var(--color-text);
+}
+.search-container .filter #region-picker .region-option:hover {
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+}
+
+.back-button {
+  color: var(--color-text);
+  text-decoration: none;
+  background-color: var(--color-button);
+}
+.back-button:hover {
+  color: var(--color-button-text);
+  background-color: var(--color-background);
+}
+
+#countries {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+#countries .card {
+  background-color: var(--color-elements);
+  color: var(--color-text);
+  border: 1px solid var(--color-input);
+}
+#countries .card:hover {
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+#country-details .country-info {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+#country-details .country-info #country-borders #border-countries-container a {
+  text-decoration: none;
+  color: var(--color-text);
+  background-color: var(--color-elements);
+  cursor: pointer;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+#country-details .country-info #country-borders #border-countries-container a:hover {
+  background-color: var(--color-background);
+}
+
+#footer {
+  background-color: var(--color-elements);
+  color: var(--color-text);
+}
+#footer p a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+#footer p a:hover {
+  text-decoration: underline;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,8 +158,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0.1rem;
-  background-color: hsl(209, 23%, 22%);
-  color: hsl(0, 0%, 100%);
 }
 #header h1 {
   font-size: 1.5rem;
@@ -33,8 +167,6 @@
   margin-left: 1.5rem;
 }
 #header button {
-  background-color: hsl(209, 23%, 22%);
-  color: hsl(0, 0%, 100%);
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -50,8 +182,6 @@
   justify-content: flex-start;
   align-items: center;
   min-height: calc(100vh - 149px);
-  background-color: hsl(207, 26%, 17%);
-  color: hsl(0, 0%, 100%);
   padding: 0 1.5rem;
 }
 #main .search-container {
@@ -68,7 +198,6 @@
   align-items: center;
   width: 100%;
   height: 50px;
-  background-color: hsl(209, 23%, 22%);
   border-radius: 0.5rem;
   padding: 1rem;
   margin-top: 2rem;
@@ -76,12 +205,10 @@
 }
 #main .search-container .search input {
   width: 100%;
-  background-color: hsl(209, 23%, 22%);
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem;
   font-size: 1rem;
-  color: hsl(0, 0%, 100%);
 }
 #main .search-container .filter {
   width: 248px;
@@ -97,7 +224,6 @@
   height: 50px;
   padding: 1rem;
   align-self: start;
-  background-color: hsl(209, 23%, 22%);
   anchor-name: --region-picker;
 }
 #main .search-container .filter #region-picker {
@@ -110,7 +236,6 @@
   position-anchor: --region-picker;
   gap: 0.25rem;
   width: 248px;
-  background-color: hsl(209, 23%, 22%);
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin-top: 0.5rem;
@@ -119,28 +244,19 @@
 #main .search-container .filter #region-picker .region-option {
   width: 100%;
   padding: 0.5rem;
-  background-color: hsl(209, 23%, 22%);
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-#main .search-container .filter #region-picker .region-option:hover {
-  background-color: hsl(207, 26%, 17%);
-}
 #main .back-button {
   text-decoration: none;
-  color: hsl(0, 0%, 100%);
   align-self: start;
-  background-color: hsl(209, 23%, 22%);
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-}
-#main .back-button:hover {
-  background-color: hsl(207, 26%, 17%);
 }
 #main #countries {
   display: flex;
@@ -153,20 +269,15 @@
 }
 #main #countries .card {
   text-decoration: none;
-  color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 300px;
-  background-color: hsl(209, 23%, 22%);
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-}
-#main #countries .card:hover {
-  background-color: hsl(207, 26%, 17%);
 }
 #main #countries .card img {
   width: 300px;
@@ -213,8 +324,6 @@
   justify-content: center;
   align-items: start;
   width: 100%;
-  background-color: hsl(207, 26%, 17%);
-  color: hsl(0, 0%, 100%);
   gap: 2rem;
 }
 #country-details .country-info .section {
@@ -252,15 +361,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(209, 23%, 22%);
   padding: 0.25rem 1.75rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-#country-details .country-info #country-borders #border-countries-container a:hover {
-  background-color: hsl(207, 26%, 17%);
 }
 
 #footer {
@@ -269,21 +370,12 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: hsl(209, 23%, 22%);
-  color: hsl(0, 0%, 100%);
   padding: 1rem;
 }
 #footer p {
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
-}
-#footer p a {
-  color: hsl(0, 0%, 100%);
-  text-decoration: none;
-}
-#footer p a:hover {
-  text-decoration: underline;
 }
 
 @media (min-width: 920px) {
