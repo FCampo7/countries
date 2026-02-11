@@ -1,5 +1,5 @@
 async function get_data() {
-	const response = await fetch("https://restcountries.com/v3.1/all?fields=10");
+	const response = await fetch("https://restcountries.com/v3.1/all?fields=name");
 	const data = await response.json();
 	const container = document.getElementById("countries");
 	data.forEach((country) => {
