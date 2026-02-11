@@ -1,5 +1,7 @@
 async function get_data() {
-	const response = await fetch("https://restcountries.com/v3.1/all?fields=name");
+	const response = await fetch(
+		"https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital",
+	);
 	const data = await response.json();
 	const container = document.getElementById("countries");
 	data.forEach((country) => {
@@ -11,7 +13,7 @@ async function get_data() {
 				<div class="card-info">
 					<h2>${country.name.common}</h2>
 					<p><strong>Population:</strong> ${Intl.NumberFormat("en-US").format(
-						country.population
+						country.population,
 					)}</p>
 					<p class="region"><strong>Region:</strong> ${country.region}</p>
 					<p><strong>Capital:</strong> ${country.capital}</p>
